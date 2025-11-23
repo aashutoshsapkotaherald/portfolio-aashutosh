@@ -7,49 +7,61 @@
     <link rel="icon" href="favicon.ico" type="image/favicon.ico">
 </head>
 <body>
-    <header>
-        <h1>Aashutosh</h1>
-        <p>Web Developer & Designer</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="top-nav">
+        <div class="brand">
+            <h1>AASHUTOSH SAPKOTA</h1>
+            <p>PORTFOLIO'25</p>
+        </div>
+        <div class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+            <button class="resume-btn">RESUME</button>
+        </div>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Lets see what ill say here.</p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project I</h3>
-                <p>will comeback here later</p>
+    <main class="main-section">
+        <div class="main-left">
+            <h2 class="main-title">A REDACTED USER DOING REDACTED THINGS</h2>
+        </div>
+        <div class="main-right">
+            <p class="main-description">Building intuition across decentralized architectures and their market dynamics.</p>
+            <p class="main-tagline">Unbounded acceleration.</p>
+            <div class="main-buttons">
+                <button class="btn-collaborate">LET'S COLLABORATE</button>
+                <button class="btn-hire">HIRE ME * PUN INTENDED *</button>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Your message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        </div>
     </main>
+
+    <section id="about" class="content-section">
+        <h2>About</h2>
+        <p>Lets see what ill say here.</p>
+    </section>
+
+    <section id="projects" class="content-section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project I</h3>
+            <p>will comeback here later</p>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy; AASHUTOSH SAPKOTA <span id="year">2025</span></p>
