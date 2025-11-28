@@ -353,6 +353,12 @@ textarea {
     min-height: 100px;
 }
 
+#form-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+}
+
 button[type="submit"] {
     background: white;
     color: black;

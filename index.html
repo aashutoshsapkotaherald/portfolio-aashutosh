@@ -84,7 +84,7 @@
 
     <section id="contact" class="content-section">
         <h2>Contact Me</h2>
-        <form>
+        <form id="contact-form">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -94,6 +94,7 @@
             <label for="message">Your message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
 
+            <div id="form-message"></div>
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -109,6 +110,26 @@
         
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+        });
+        
+        const contactForm = document.getElementById('contact-form');
+        const messageDiv = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('name').value.trim();
+            const emailInput = document.getElementById('email').value.trim();
+            const messageInput = document.getElementById('message').value.trim();
+            
+            if (nameInput === '' || emailInput === '' || messageInput === '') {
+                messageDiv.textContent = 'You need to fill out all the fields.';
+                messageDiv.style.color = 'red';
+            } else {
+                messageDiv.textContent = 'Howdy! I will be in touch shortly.';
+                messageDiv.style.color = 'grey';
+                contactForm.reset();
+            }
         });
     </script>
 </body>
