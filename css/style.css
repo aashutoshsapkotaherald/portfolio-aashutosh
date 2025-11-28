@@ -19,23 +19,23 @@ body {
 
 .brand {
     display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    cursor: pointer;
 }
 
 .brand h1 {
     font-size: 24px;
     font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 .brand p {
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
+    opacity: 0.8;
 }
 
 .menu-toggle {
@@ -58,6 +58,11 @@ body {
 .nav-links {
     display: flex;
     gap: 20px;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
 }
 
 .nav-links a {
@@ -369,15 +374,27 @@ footer p {
 
 @media (max-width: 768px) {
     .top-nav {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 15px;
         padding: 15px;
     }
     
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+    
     .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-links.active {
+        display: flex;
     }
     
     .main-section {

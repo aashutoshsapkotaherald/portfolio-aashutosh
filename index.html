@@ -12,8 +12,14 @@
             <h1>AASHUTOSH SAPKOTA</h1>
             <p>PORTFOLIO'25</p>
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
             <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
             <a href="#projects">PROJECTS</a>
             <a href="#contact">CONTACT</a>
             <button class="resume-btn">RESUME</button>
@@ -93,6 +99,13 @@
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
