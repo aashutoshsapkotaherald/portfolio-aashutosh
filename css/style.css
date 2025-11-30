@@ -55,7 +55,9 @@ body {
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
+    z-index: 101;
+    position: relative;
 }
 
 .menu-toggle span {
@@ -63,6 +65,19 @@ body {
     height: 3px;
     background: white;
     transition: all 0.3s ease;
+    display: block;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .nav-links {
@@ -488,11 +503,17 @@ footer p {
         flex-wrap: wrap;
         gap: 15px;
         padding: 15px;
+        position: relative;
     }
     
     .menu-toggle {
-        display: flex;
+        display: flex !important;
         margin-left: auto;
+        order: 2;
+    }
+    
+    .brand {
+        order: 1;
     }
     
     .nav-links {
@@ -502,10 +523,25 @@ footer p {
         gap: 15px;
         padding-top: 15px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+        order: 3;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 15px;
+        margin-top: 10px;
     }
     
     .nav-links.active {
         display: flex;
+    }
+    
+    .nav-links a,
+    .nav-links .resume-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
     }
     
     .main-section {
