@@ -58,6 +58,12 @@ body {
     padding: 8px;
     z-index: 101;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-toggle span {
@@ -510,6 +516,8 @@ footer p {
         display: flex !important;
         margin-left: auto;
         order: 2;
+        z-index: 102;
+        pointer-events: auto;
     }
     
     .brand {
